@@ -1,13 +1,13 @@
-package com.gotham.cashmanager.ui.notifications
+package com.gotham.cashmanager.ui.scan
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ScanViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is Scan Fragment"
     }
     val text: LiveData<String> = _text
 }
