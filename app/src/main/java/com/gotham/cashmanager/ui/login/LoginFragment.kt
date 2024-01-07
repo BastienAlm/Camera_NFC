@@ -134,11 +134,11 @@ class LoginFragment : Fragment() {
                 }
                 println(sharedPref.getString("access_token", ""))
                 passDataToParent2(sharedPref.getString("access_token", "").toString())
-                val intent = Intent(context, ScanFragment::class.java)
-                startActivity(intent)
-               // getFragmentManager()?.popBackStack()
-                //findNavController().navigate(R.id.navigation_scan)
-               //requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, ScanFragment()).commit()
+               /* val intent = Intent(context, ScanFragment::class.java)
+                startActivity(intent)*/
+                //findNavController().navigate(R.id.navigation_paymentDialog)
+                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, PayementDialog()).commit()
+
             }
             })
 

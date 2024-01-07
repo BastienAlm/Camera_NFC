@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.gotham.cashmanager.R
 import com.gotham.cashmanager.databinding.FragmentPayementDialogBinding
+import com.gotham.cashmanager.ui.scan.ScanFragment
 
 
 class PayementDialog : Fragment() {
@@ -24,7 +25,8 @@ class PayementDialog : Fragment() {
         _binding = FragmentPayementDialogBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.cheque.setOnClickListener { root -> findNavController().navigate(R.id.navigation_scan) //getFragmentManager()?.popBackStack()
+        binding.cheque.setOnClickListener { root -> requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, ScanFragment()).commit()
+             //getFragmentManager()?.popBackStack()
            // requireActivity().supportFragmentManager.beginTransaction().(R.id.container, CartFragment()).commit()
 
         }

@@ -28,7 +28,6 @@
         <activity
             android:name=".ui.nfc.NfcActicity"
             android:exported="false"
-            android:launchMode="singleTask"
             >
         <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
             android:resource="@xml/techlist" />

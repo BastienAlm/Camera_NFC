@@ -44,7 +44,7 @@ class  CartFragment : Fragment(), CartItemsAdapter.DataPassListener, LoginFragme
         val root: View = binding.root
 
 
-        binding.btnPayment.setOnClickListener { root -> findNavController().navigate(R.id.navigation_paymentDialog)} /*if(access_token == ""){ requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, LoginFragment()).addToBackStack(null).commit()}
+        binding.btnPayment.setOnClickListener { root -> if(access_token == ""){ findNavController().navigate(R.id.navigation_login)}else{findNavController().navigate(R.id.navigation_paymentDialog)}  } /*requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, LoginFragment()).addToBackStack(null).commit()}
         else requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, payementDialog).addToBackStack(null).commit()}*/
 
         return root

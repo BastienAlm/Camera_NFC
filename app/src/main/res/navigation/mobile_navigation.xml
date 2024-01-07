@@ -81,4 +81,5 @@
             app:destination="@id/navigation_scan" />
     </fragment>
 
+
 </navigation>

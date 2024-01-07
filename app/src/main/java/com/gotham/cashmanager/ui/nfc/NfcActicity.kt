@@ -10,13 +10,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.gotham.cashmanager.R
+import com.gotham.cashmanager.databinding.ActivityMainBinding
+import com.gotham.cashmanager.databinding.ActivityNfcActicityBinding
 
 
 class NfcActicity : AppCompatActivity() {
     private var nfcAdapter: NfcAdapter? = null
+    private lateinit var binding: ActivityNfcActicityBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nfc_acticity)
+
+        binding = ActivityNfcActicityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         this.nfcAdapter = NfcAdapter.getDefaultAdapter(this)?.let { it }
     }
