@@ -1,25 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="80dp">
+    tools:context=".ui.cart.cartItem">
 
-    <TextView
-        android:id="@+id/txt_cart_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Example"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="341dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingStart="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="50dp"
+        android:background="@drawable/borderbottom"
+        >
 
-    <ImageView
-        android:id="@+id/imgV_cart_item"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_cart_item"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtcartitem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="2dp"
+            android:paddingStart="4dp"
+            android:text="Example"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtcartprice"
+            app:layout_constraintStart_toEndOf="@+id/imgVcartitem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.508" />
+
+        <TextView
+            android:id="@+id/txtcartprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:paddingEnd="6dp"
+            android:paddingRight="2dp"
+            android:text="0"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnsubstract"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.566"
+
+            />
+
+        <TextView
+            android:id="@+id/txtcarttotalprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            android:paddingEnd="6dp"
+            android:paddingRight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnsubstract"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521"/>
+
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:text="0"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imgVcartitem"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            />
+
+        <Button
+            android:id="@+id/btnsubstract"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quantity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnadd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

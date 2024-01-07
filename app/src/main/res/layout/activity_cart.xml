@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cart.CartFragment">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvcart"
+            android:layout_width="381dp"
+            android:layout_height="505dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_cart" />
+
+        <TextView
+            android:id="@+id/total1"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="5dp"
+            android:text="Total"
+            android:textColor="@color/black"
+
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/totalht"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvcart" />
+
+        <TextView
+            android:id="@+id/totalht"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="168dp"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvcart" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="34dp"
+            android:text="€"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/totalht"
+            app:layout_constraintTop_toTopOf="@+id/totalht" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="15dp"
+            android:layout_height="34dp"
+            android:text="€"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/totalttc"
+            app:layout_constraintTop_toBottomOf="@+id/taxe" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="15dp"
+            android:layout_height="34dp"
+            android:text="€"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/taxe"
+            app:layout_constraintTop_toTopOf="@+id/taxe" />
+
+        <TextView
+            android:id="@+id/total2"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:paddingHorizontal="5dp"
+            android:text="Taxe"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/taxe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total1" />
+
+        <TextView
+            android:id="@+id/taxe"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="168dp"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalht" />
+
+
+        <TextView
+            android:id="@+id/total3"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:paddingHorizontal="5dp"
+            android:text="Total TTC"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/totalttc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total2" />
+
+        <TextView
+            android:id="@+id/totalttc"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="168dp"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taxe" />
+
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Payer"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/totalttc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/taxe"
+            app:layout_constraintTop_toBottomOf="@+id/totalht" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

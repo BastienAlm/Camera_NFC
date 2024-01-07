@@ -9,23 +9,76 @@
         android:id="@+id/navigation_scan"
         android:name="com.gotham.cashmanager.ui.scan.ScanFragment"
         android:label="@string/title_scan"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/navigation_shop"
         android:name="com.gotham.cashmanager.ui.shop.ShopFragment"
         android:label="@string/title_shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_navigation_shop_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+        <action
+            android:id="@+id/action_navigation_shop_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_cart"
         android:name="com.gotham.cashmanager.ui.cart.CartFragment"
         android:label="@string/title_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/activity_cart" >
+        <action
+            android:id="@+id/action_navigation_cart_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.gotham.cashmanager.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_shop"
+            app:destination="@id/navigation_shop" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+
+    <fragment android:id="@+id/navigation_paymentDialog"
+        android:name="com.gotham.cashmanager.ui.cart.PayementDialog"
+        android:label="Payement"
+        tools:layout="@layout/fragment_payement_dialog" >
+        <action
+            android:id="@+id/action_navigation_paymentDialog_to_navigation_shop"
+            app:destination="@id/navigation_shop" />
+        <action
+            android:id="@+id/action_navigation_paymentDialog_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_paymentDialog_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.gotham.cashmanager.ui.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_mobile_navigation_to_navigation_shop"
+            app:destination="@id/navigation_shop" />
+        <action
+            android:id="@+id/action_mobile_navigation_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_mobile_navigation_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_scan"
+            app:destination="@id/navigation_scan" />
+    </fragment>
+
 </navigation>
